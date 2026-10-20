@@ -1,4 +1,4 @@
-import random
+import random as r
 user_name = input("Please enter name: ")
 
 print(f"Welcome, {user_name}! Try to guess the number.")
@@ -42,7 +42,7 @@ def guessgame(answer):
 
 
 def main():
-    answers = [50, 15, 25, 64, 99]
+    answers = [r.randint(1, 101) for _ in range(5)]
 
     for number in answers:
        if guessgame(number):
